@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import CounterClassComponent from './CounterClassComponent'
+import CounterFunctionalComponent from './CounterFunctionalComponent'
 
 export default function App() {
   
@@ -21,6 +23,9 @@ export default function App() {
       >
         Reset
       </button>
+
+      <CounterClassComponent/>
+      <CounterFunctionalComponent/>
       
     </div>
   )

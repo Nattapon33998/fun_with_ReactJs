@@ -3,6 +3,7 @@ import CounterClassComponent from './CounterClassComponent'
 import CounterFunctionalComponent from './CounterFunctionalComponent'
 import Ex1Style from './components/ex1_styles'
 import Ex2Image from './components/ex2_image'
+import Ex3Props from './components/ex3_props'
 
 export default function App() {
   
@@ -28,10 +29,13 @@ export default function App() {
 
       <CounterClassComponent/>
       <CounterFunctionalComponent/>
+
       <Ex1Style/>
 
       <Ex2Image/>
       <Ex2Image image="/images/launch.png"/>
+
+      <Ex3Props count={count} color="#F03" showLabel={true}/>
     </div>
   )
 }

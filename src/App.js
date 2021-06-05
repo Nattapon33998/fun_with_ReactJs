@@ -31,6 +31,7 @@ export default function App() {
       <Ex1Style/>
 
       <Ex2Image/>
+      <Ex2Image image="/images/launch.png"/>
     </div>
   )
 }

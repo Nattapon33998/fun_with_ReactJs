@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import CounterClassComponent from './CounterClassComponent'
 import CounterFunctionalComponent from './CounterFunctionalComponent'
+import Ex1Style from './components/ex1_styles'
 
 export default function App() {
   
@@ -26,7 +27,7 @@ export default function App() {
 
       <CounterClassComponent/>
       <CounterFunctionalComponent/>
-      
+      <Ex1Style/>
     </div>
   )
 }

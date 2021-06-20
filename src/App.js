@@ -5,7 +5,7 @@ import Ex1Style from './components/ex1_styles'
 import Ex2Image from './components/ex2_image'
 import Ex3Props from './components/ex3_props'
 
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, Switch } from 'react-router-dom'
 
 export default function App() {
   
@@ -53,9 +53,15 @@ export default function App() {
         </ul>
       </nav>
 
-      <Route exact path="/"><Ex1Style/></Route>
-      <Route path="/Ex2"><Ex2Image/></Route>
-      <Route path="/Ex3"><Ex3Props count={count} color="#F03" showLabel={true}/></Route>
+
+      <Switch>
+        <Route exact path="/"><Ex1Style/></Route>
+        <Route path="/Ex2"><Ex2Image/></Route>
+        <Route path="/Ex3"><Ex3Props count={count} color="#F03" showLabel={true}/></Route>
+        <Route path="/:id">
+          <h3>404 NOt Found</h3>
+        </Route>
+      </Switch>
     </div>
   )
 }

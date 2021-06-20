@@ -1,0 +1,8 @@
+vsCode Extension
+1. vscode-icon
+2. es7/react/..
+3. color hilight
+4. html to jsx
+5. path intellisense
+6. matching tags
+7. prettier

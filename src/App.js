@@ -4,6 +4,7 @@ import CounterFunctionalComponent from './CounterFunctionalComponent'
 import Ex1Style from './components/ex1_styles'
 import Ex2Image from './components/ex2_image'
 import Ex3Props from './components/ex3_props'
+import Ex5Nesting from './components/ex5_DynamicNestingRoute.js'
 
 import { Link, Route, Switch } from 'react-router-dom'
 
@@ -50,6 +51,9 @@ export default function App() {
           <li>
             <Link to='/Ex3'>Ex3</Link>
           </li>
+          <li>
+            <Link to='/Cat'>Cat</Link>
+          </li>
         </ul>
       </nav>
 
@@ -58,6 +62,7 @@ export default function App() {
         <Route exact path="/"><Ex1Style/></Route>
         <Route path="/Ex2"><Ex2Image/></Route>
         <Route path="/Ex3"><Ex3Props count={count} color="#F03" showLabel={true}/></Route>
+        <Route path="/Cat"><Ex5Nesting/></Route>
         <Route path="/:id">
           <h3>404 NOt Found</h3>
         </Route>

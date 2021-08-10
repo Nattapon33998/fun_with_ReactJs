@@ -1,11 +1,11 @@
 import React from "react";
 
 const display = (props) => {
-  const { name, sayary, bloudGroup } = props;
+  const { name, sayary, bloudGroup, company } = props;
   console.log(props.address);
   return (
     <div>
-      <h3>{`name: ${name} sayary: ${sayary} bloudGroup: ${bloudGroup}`}</h3>
+      <h3>{`name: ${name} sayary: ${sayary} bloudGroup: ${bloudGroup} Company: ${company}`}</h3>
       {props.address.map((detail) => {
         const { city, street, houseNumber } = detail;
         return (

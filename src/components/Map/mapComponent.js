@@ -3,6 +3,9 @@ import dataEmployees from "./data";
 import Display from "./display";
 
 const mapComponent = () => {
+  const baseData = {
+    company: "Google",
+  };
   return (
     <div>
       {/* Type 1 */}
@@ -22,9 +25,10 @@ const mapComponent = () => {
       })} */}
 
       {/* easy way */}
-      {dataEmployees.map((employee) => (
-        <Display key={Display.key} {...employee} />
-      ))}
+      {dataEmployees.map((employee) => {
+        const Employee = { ...baseData, ...employee };
+        return <Display key={Display.key} {...Employee} />;
+      })}
     </div>
   );
 };

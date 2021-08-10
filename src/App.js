@@ -7,6 +7,7 @@ import Ex3Props from "./components/ex3_props";
 import Ex5Nesting from "./components/ex5_DynamicNestingRoute.js";
 
 import Deconstructuring from "./components/Deconstruct/deconstructuring";
+import MapComponent from "./components/Map/mapComponent";
 
 import { Link, Route, Switch } from "react-router-dom";
 
@@ -62,6 +63,7 @@ export default function App() {
         <Route exact path="/">
           <Ex1Style />
           <Deconstructuring />
+          <MapComponent />
         </Route>
         <Route path="/Ex2">
           <Ex2Image />

@@ -8,6 +8,7 @@ import Ex5Nesting from "./components/ex5_DynamicNestingRoute.js";
 
 import Deconstructuring from "./components/Deconstruct/deconstructuring";
 import MapComponent from "./components/Map/mapComponent";
+import Conditional from "./components/Conditional/conditional";
 
 import { Link, Route, Switch } from "react-router-dom";
 
@@ -56,14 +57,21 @@ export default function App() {
           <li>
             <Link to="/Cat">Cat</Link>
           </li>
+          <li>
+            <Link to="/Destructuring">Destructuring</Link>
+          </li>
+          <li>
+            <Link to="Map">Map</Link>
+          </li>
+          <li>
+            <Link to="/Conditional">Conditional</Link>
+          </li>
         </ul>
       </nav>
 
       <Switch>
         <Route exact path="/">
           <Ex1Style />
-          <Deconstructuring />
-          <MapComponent />
         </Route>
         <Route path="/Ex2">
           <Ex2Image />
@@ -73,6 +81,15 @@ export default function App() {
         </Route>
         <Route path="/Cat">
           <Ex5Nesting />
+        </Route>
+        <Route path="/Destructuring">
+          <Deconstructuring />
+        </Route>
+        <Route path="/Map">
+          <MapComponent />
+        </Route>
+        <Route path="/Conditional">
+          <Conditional />
         </Route>
         <Route path="/:id">
           <h3>404 NOt Found</h3>

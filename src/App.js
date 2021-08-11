@@ -9,6 +9,7 @@ import Ex5Nesting from "./components/ex5_DynamicNestingRoute.js";
 import Deconstructuring from "./components/Deconstruct/deconstructuring";
 import MapComponent from "./components/Map/mapComponent";
 import Conditional from "./components/Conditional/conditional";
+import UseEffect from "./components/useEffect/useEffect";
 
 import { Link, Route, Switch } from "react-router-dom";
 
@@ -66,6 +67,9 @@ export default function App() {
           <li>
             <Link to="/Conditional">Conditional</Link>
           </li>
+          <li>
+            <Link to="/useEffect">useEffect</Link>
+          </li>
         </ul>
       </nav>
 
@@ -90,6 +94,9 @@ export default function App() {
         </Route>
         <Route path="/Conditional">
           <Conditional />
+        </Route>
+        <Route path="/useEffect">
+          <UseEffect />
         </Route>
         <Route path="/:id">
           <h3>404 NOt Found</h3>

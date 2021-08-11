@@ -2,7 +2,7 @@ import React from "react";
 
 const display = (props) => {
   const { name, sayary, bloudGroup, company } = props;
-  console.log(props.address);
+  // console.log(props.address);
   return (
     <div>
       <h3>{`name: ${name} sayary: ${sayary} bloudGroup: ${bloudGroup} Company: ${company}`}</h3>

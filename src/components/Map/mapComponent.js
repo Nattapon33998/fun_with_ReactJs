@@ -6,6 +6,7 @@ const mapComponent = () => {
   const baseData = {
     company: "Google",
   };
+  console.log(dataEmployees);
   return (
     <div>
       {/* Type 1 */}

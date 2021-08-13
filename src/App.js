@@ -12,6 +12,7 @@ import Conditional from "./components/Conditional/conditional";
 import UseEffect from "./components/useEffect/useEffect";
 import TodoList from "./components/Todos/TodoList";
 import TodoDetail from "./components/Todos/TodoDetail";
+import Redux from "./components/Redux/DisplayRedux";
 
 import { Link, Route, Switch } from "react-router-dom";
 
@@ -72,6 +73,12 @@ export default function App() {
           <li>
             <Link to="/useEffect">useEffect</Link>
           </li>
+          <li>
+            <Link to="/Todos">Todos</Link>
+          </li>
+          <li>
+            <Link to="/Redux">Redux</Link>
+          </li>
         </ul>
       </nav>
 
@@ -105,6 +112,9 @@ export default function App() {
         </Route>
         <Route path="/Todo/:id">
           <TodoDetail />
+        </Route>
+        <Route path="/Redux">
+          <Redux />
         </Route>
         <Route path="/:id">
           <h3>404 NOt Found</h3>

@@ -12,7 +12,7 @@ const TodoDetail = () => {
       .then((res) => {
         setData(res.data);
       });
-  });
+  }, []);
 
   const { id: todoId, userId, title, completed } = data || {};
 

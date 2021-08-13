@@ -10,7 +10,7 @@ const TodoList = () => {
     axios.get(`https://jsonplaceholder.typicode.com/todos`).then((res) => {
       setTodoList(res.data);
     });
-  });
+  }, []);
 
   return (
     <div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 import className from "classnames";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles({
@@ -25,9 +25,28 @@ const propStyles = makeStyles({
   },
 });
 
+const breakpointStyles = makeStyles((theme) => ({
+  buttonText: (props) => {
+    return {
+      color: props.red ? "red" : "blue",
+      [theme.breakpoints.down("sm")]: {
+        color: "black",
+      },
+    };
+  },
+
+  //   buttonText: {
+  //     color: "red",
+  //     [theme.breakpoints.up("sm")]: {
+  //       color: "blue",
+  //     },
+  //   },
+}));
+
 const MakeStyle = (props) => {
   const classes = useStyles();
   const secoundClasses = propStyles(props);
+  const thirdClasses = breakpointStyles(props);
 
   return (
     <div>
@@ -43,6 +62,7 @@ const MakeStyle = (props) => {
       <Button className={secoundClasses.buttonStyles}>
         Multiple Style by props
       </Button>
+      <Button className={thirdClasses.buttonText}>Breakpoint Styles</Button>
     </div>
   );
 };

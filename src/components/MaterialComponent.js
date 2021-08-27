@@ -3,6 +3,7 @@ import { Link, Switch, Route, useRouteMatch } from "react-router-dom";
 
 import MakeStyle from "./Material/MakeStyle";
 import ButtonComponent from "./Material/ButtonComponent";
+import TypographyComponent from "./Material/TypographyComponent";
 
 const MaterialComponent = () => {
   let { path, url } = useRouteMatch();
@@ -14,6 +15,9 @@ const MaterialComponent = () => {
       <ul>
         <Link to={`${url}/button`}>Button</Link>
       </ul>
+      <ul>
+        <Link to={`${url}/typography`}>Typography</Link>
+      </ul>
 
       <Switch>
         <Route path={`${path}/makeStyle`}>
@@ -21,6 +25,9 @@ const MaterialComponent = () => {
         </Route>
         <Route path={`${path}/>button`}>
           <ButtonComponent />
+        </Route>
+        <Route path={`${path}/typography`}>
+          <TypographyComponent />
         </Route>
       </Switch>
     </div>
